@@ -1,0 +1,13 @@
+{
+  "name": "@ai-assistant-kit/gemini",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Серверный транспорт Google Gemini для изолированного ядра ассистента.",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "@google/genai": "^1.20.0"
+  }
+}

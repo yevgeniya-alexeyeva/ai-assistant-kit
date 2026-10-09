@@ -1,0 +1,19 @@
+{
+  "name": "@ai-assistant-kit/react",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "React-адаптер ассистента: хук, HTTP-транспорт и локальное хранилище.",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "@ai-assistant-kit/core": "0.1.0"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "react": "^19.1.1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@ai-assistant-kit/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Изолированная бизнес-логика диалогового ассистента.",
+  "exports": {
+    ".": "./src/index.js"
+  }
+}

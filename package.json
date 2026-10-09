@@ -1,0 +1,31 @@
+{
+  "name": "ai-assistant-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Переносимый AI-ассистент с изолированным ядром, React-адаптером и серверным Gemini API.",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/demo/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green npm:dev:server npm:dev:client",
+    "dev:client": "npm run dev -w @ai-assistant-kit/demo-client",
+    "dev:server": "npm run dev -w @ai-assistant-kit/demo-server",
+    "build": "npm run build -w @ai-assistant-kit/demo-client",
+    "test": "node --test --test-concurrency=1 test/boundaries.test.js packages/core/test/assistant.test.js packages/react/test/ndjson.test.js packages/react/test/httpTransport.test.js packages/gemini/test/transport.test.js apps/demo/server/test/validate.test.js apps/demo/server/test/app.test.js",
+    "lint": "eslint .",
+    "check": "npm run lint && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.4.0"
+  }
+}
